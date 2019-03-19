@@ -1,12 +1,8 @@
 {
-  "name": "align-web-demo",
+  "name": "electron-web-demo",
   "scripts": {
   },
-  "env": {
-    "DOCTOR_ID" : {
-      "description": "the salesforce ID that you want to set leads from your fake web page",
-      "required":true
-    }
+  "env": {    
   },
   "formation": {
     "web": {

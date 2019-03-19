@@ -11,16 +11,22 @@ const pool = new Pool({
 /* GET home page. */
 router.get('/', function(req, res, next) {
   console.log('routing in index');
-  res.render('locator', {success: false});
+  res.render('home');
+});
+
+/* GET home page. */
+router.get('/testdrive', function(req, res, next) {
+  console.log('testdriveform');
+  res.render('testdrive', { success:false } );
 });
 
 /* form handling */
 router.post('/leadform', async function (req, res, next) {
   console.log('routing on post form');
   console.log(req.body);
-  const result = await pool.query(`insert into salesforce.lead(firstname, lastname, doctor__c, mobilephone, postalcode, date_of_birth__c, email, company) Values ('${req.body.txtFirstName}', '${req.body.txtLastName}', '${process.env.DOCTOR_ID}', '${req.body.txtPhoneNumber}', '${req.body.txtZipDC}', '${req.body.txtDOB}', '${req.body.txtEmail}', 'Invisalign')`);
+  const result = await pool.query(`insert into salesforce.lead(firstname, lastname, mobilephone, email, company) Values ('${req.body.firstname}', '${req.body.lasttname}', '${req.body.phone}', '${req.body.email}', 'Electron')`);
   console.log(result);
-  res.render('locator', { success: true });
+  res.render('testdrive', { success: true });
 });
 
 module.exports = router;
