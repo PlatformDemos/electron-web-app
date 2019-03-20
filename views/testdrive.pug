@@ -10,6 +10,12 @@ block content
             h1 Take a Test Drive Today
             form(action='/leadform' method='post')
                 .form-group
+                    label Model
+                    select.form-control
+                        option(value='Flare') Flare
+                        option(value='Flash') Flash
+                        option(value='Flint') Flint
+                .form-group
                     label First Name
                     input.form-control(placeholder='First Name' name='firstname')
                 .form-group
@@ -25,5 +31,6 @@ block content
                     label Where will your test drive happen?
                     select.form-control
                         option(value='dealer') I'll come by the dealership
-                        option(value='other') At a location of my choice (specify) 
+                        option(value='other') At a location of my choice (specify)
+                
                 button.btn.btn-default(type='submit') Submit
