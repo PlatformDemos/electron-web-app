@@ -2,13 +2,13 @@ extends layout
 
 block content    
     if success
-        .successmessage
+        .leadform
             h2 Thank You
-            h4 Your local dealership will send you a car
+            h4 We're looking forward to seeing you!
     else
         .leadform
             h1 Take a Test Drive Today
-            form(action='/leadform' method='post')
+            form(action='/testdrive' method='post')
                 .form-group
                     label Model
                     select.form-control(name='model')
