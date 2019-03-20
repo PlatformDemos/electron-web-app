@@ -24,7 +24,7 @@ router.get('/testdrive', function(req, res, next) {
 router.post('/leadform', async function (req, res, next) {
   console.log('routing on post form');
   console.log(req.body);
-  const result = await pool.query(`insert into salesforce.lead(firstname, lastname, mobilephone, email, company) Values ('${req.body.firstname}', '${req.body.lasttname}', '${req.body.phone}', '${req.body.email}', 'Electron')`);
+  const result = await pool.query(`insert into salesforce.Test_Drive__c(First_Name__c, Last_Name__c, Phone__c, Email__c, Model__c, Location__c) Values ('${req.body.firstname}', '${req.body.lasttname}', '${req.body.phone}', '${req.body.email}', '${req.body.model}', '${req.body.location}')`);
   console.log(result);
   res.render('testdrive', { success: true });
 });

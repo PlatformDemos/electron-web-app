@@ -9,7 +9,7 @@ block content
         .leadform
             h1 Take a Test Drive Today
             form(action='/leadform' method='post')
-                .form-group
+                .form-group(name='model')
                     label Model
                     select.form-control
                         option(value='Flare') Flare
@@ -29,7 +29,7 @@ block content
                     input.form-control(placeholder='Phone #' name='phone' type='tel')
                 .form-group
                     label Where will your test drive happen?
-                    select.form-control
+                    select.form-control(name='location')
                         option(value='dealer') I'll come by the dealership
                         option(value='other') At a location of my choice (specify)
                 
