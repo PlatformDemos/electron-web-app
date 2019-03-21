@@ -16,17 +16,16 @@ body
             a flare
             a flash
         .login
-            a login
+            a(href=env.LOGIN_URL) login
     
     .content
         block content
 
     .footer
-        a Electron Motors
-        a Privacy & Legal
-        a Contact
-        a Careers
-        a Newsletter
-        a Forums
-        a Locations
-        a Dealer Login
+        a(href=env.DEALER_URL) Privacy & Legal
+        a(href=env.DEALER_URL) Contact
+        a(href=env.DEALER_URL) Careers
+        a(href=env.DEALER_URL) Newsletter
+        a(href=env.DEALER_URL) Forums
+        a(href=env.DEALER_URL) Locations
+        a(href=env.DEALER_URL) Dealer Login

@@ -8,6 +8,7 @@ const pool = new Pool({
   connectionString: DATABASE_URL
 });
 
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   console.log('routing in index');
