@@ -1,15 +1,16 @@
 {
   "name": "electron-web-demo",
-  "scripts": {
-  },
-  "env": {    
-  },
+  "scripts": {},
+  "env": {},
   "formation": {
     "web": {
       "quantity": 1
     }
   },
   "addons": [
+    {
+      "plan": "papertrail:Chokrad"
+    },
     {
       "plan": "heroku-postgresql:hobby-dev"
     },
