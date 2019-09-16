@@ -9,7 +9,7 @@
   },
   "addons": [
     {
-      "plan": "papertrail:Chokrad"
+      "plan": "papertrail:chokrad"
     },
     {
       "plan": "heroku-postgresql:hobby-dev"
